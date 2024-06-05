@@ -1,4 +1,4 @@
-<aside class="w-full md:w-1/4 p-3">
+
         <div class="bg-gray-700 rounded-lg shadow-lg p-4">
           <h2 class="font-bold text-lg mb-4">Categories</h2>
           <ul class="list-reset">
@@ -33,4 +33,3 @@
             >
           </div>
         </div>
-      </aside>
