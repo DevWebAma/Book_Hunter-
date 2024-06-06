@@ -6,7 +6,7 @@ use \PDO;
 function indexAction (PDO $connexion) {
 
   include_once '../app/models/booksModel.php';
-  $books = \App\Models\BooksModel\findAll($connexion);
+  $books = \App\Models\BooksModel\findAll($connexion, 6);
 
   global $content, $title;
 
