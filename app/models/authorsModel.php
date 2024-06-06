@@ -6,10 +6,12 @@ use \PDO;
 
 function findAll(PDO $connexion): array {
  
-  $sql = "SELECT *
-          FROM authors
-          ORDER BY created_at DESC
-          LIMIT 3";
+  $sql = "SELECT *, un.note as usersNotations
+          FROM authors a
+          INNER JOIN books b ON b.author_id = a.id 
+          INNER JOIN users_notations un ON b.id = un.book_id
+          ORDER BY b.created_at DESC
+          LIMIT 3;";
 
   return $connexion -> query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
